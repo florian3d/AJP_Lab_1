@@ -13,6 +13,13 @@ public class MyClassController : ControllerBase
         _logger = logger;
     }
 
+    // http://localhost:5000
+    [HttpGet("/")]
+    public string Root()
+    {
+        return "Hello World!";
+    }
+
     // http://localhost:5000/api/all
     [HttpGet("api/all")]
     public List<Item> GetAll()
